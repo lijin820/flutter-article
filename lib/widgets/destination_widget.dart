@@ -30,16 +30,6 @@ class DestinationView extends StatefulWidget {
 }
 
 class _DestinationViewState extends State<DestinationView> {
-  TextEditingController _textController;
-
-  @override
-  void initState() {
-    super.initState();
-    _textController = TextEditingController(
-      text: 'sample text: ${widget.destination.title}',
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Navigator(

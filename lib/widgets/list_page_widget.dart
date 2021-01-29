@@ -41,7 +41,7 @@ class ListPage extends StatelessWidget {
                   },
                   child: Center(
                     child: Text('Item $index',
-                        style: Theme.of(context).primaryTextTheme.display1),
+                        style: Theme.of(context).primaryTextTheme.bodyText1),
                   ),
                 ),
               ),
