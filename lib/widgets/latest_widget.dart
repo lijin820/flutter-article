@@ -19,21 +19,22 @@ class _LatestState extends State<Latest> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-            top: true,
-            child: Stack(fit: StackFit.expand, children: [
-              MaterialSegmentedControl(
-                children: _children(),
-                selectionIndex: _currentSelection,
-                borderColor: Colors.grey,
-                selectedColor: Colors.redAccent,
-                unselectedColor: Colors.white,
-                borderRadius: 32.0,
-                onSegmentChosen: (index) {
-                  setState(() {
-                    _currentSelection = index;
-                  });
-                },
-              )
-            ])));
+      top: true,
+      child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        MaterialSegmentedControl(
+          children: _children(),
+          selectionIndex: _currentSelection,
+          borderColor: Colors.grey,
+          selectedColor: Colors.redAccent,
+          unselectedColor: Colors.white,
+          borderRadius: 32.0,
+          onSegmentChosen: (index) {
+            setState(() {
+              _currentSelection = index;
+            });
+          },
+        )
+      ]),
+    ));
   }
 }
